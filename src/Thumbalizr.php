@@ -57,7 +57,7 @@ class Thumbalizr {
 	}
 
 	/**
-	 * Resize
+	 * Capture
 	 * 
 	 * @param Request $request
 	 * @param string $destination
@@ -65,7 +65,7 @@ class Thumbalizr {
 	 * @throws Exception
 	 * @author Paolo Agostinetto <paul.ago@gmail.com>
 	 */
-	public function resize(Request $request, $destination){
+	public function capture(Request $request, $destination){
 
 		$client = $this->prepareHttpRequest($request);
 

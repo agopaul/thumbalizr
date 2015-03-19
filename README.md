@@ -12,5 +12,5 @@ $req->setUrl("http://google.com");
 $req->setWidth(1280);
 
 $wrapper = new \Thumbalizr\Thumbalizr("API_KEY");
-$wrapper->resize($req, __DIR__."/test-api.jpg");
+$wrapper->capture($req, __DIR__."/test-api.jpg");
 ```
