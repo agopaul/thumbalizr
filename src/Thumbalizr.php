@@ -101,6 +101,11 @@ class Thumbalizr {
 						$error->getFieldValue()
 					));
 				}
+				else{
+					// In queue
+
+					sleep(3); // Sleep 3 sec
+				}
 			}
 			else{
 				throw new Exception(sprintf("API Error - HTTP %d: %s",
