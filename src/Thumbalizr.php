@@ -26,7 +26,7 @@ class Thumbalizr {
 
 	/**
 	 * Prepare req
-	 * 
+	 *
 	 * @param Request $request
 	 * @return Client
 	 * @author Paolo Agostinetto <paul.ago@gmail.com>
@@ -50,7 +50,8 @@ class Thumbalizr {
 			"mode" => $request->getMode(),
 			"bwidth" => $request->getBrowserWidth(),
 			"bheight" => $request->getBrowserHeight(),
-			"url" => $request->getUrl()
+			"url" => $request->getUrl(),
+			"generate" => 1 // Always refresh thumb
 		));
 
 		return $client;
@@ -58,7 +59,7 @@ class Thumbalizr {
 
 	/**
 	 * Capture
-	 * 
+	 *
 	 * @param Request $request
 	 * @param string $destination
 	 * @return void
@@ -72,7 +73,7 @@ class Thumbalizr {
 		// This API works with a queue, we make the first call and then retry every 3
 		// seconds checking if it's done
 
-		$timeoutSeconds = 60;
+		$timeoutSeconds = 180;
 		$isDone = false;
 		$timeStart = microtime(true);
 
