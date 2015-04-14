@@ -50,8 +50,8 @@ class Thumbalizr {
 			"mode" => $request->getMode(),
 			"bwidth" => $request->getBrowserWidth(),
 			"bheight" => $request->getBrowserHeight(),
-			"url" => $request->getUrl(),
-			"generate" => 1 // Always refresh thumb
+			"url" => $request->getUrl()."&rnd=".rand(100000, 999999999),
+			"generate" => 0 // Don't refresh thumb
 		));
 
 		return $client;
