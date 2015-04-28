@@ -115,6 +115,9 @@ class Request {
 	 * @param string $delay
 	 */
 	public function setDelay($delay) {
+		if($delay < 0 || $delay > 30){
+			throw new \OutOfRangeException("Choose between 0 and 30 seconds");
+		}
 		$this->delay = $delay;
 	}
 
